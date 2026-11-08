@@ -1,0 +1,13 @@
+.DS_Store
+*.swp
+*.swo
+*.bak
+.env
+.env.*
+!.env.example
+**/settings.local.json
+**/mcp.json
+**/globalStorage/
+**/workspaceStorage/
+**/History/
+**/sync/
