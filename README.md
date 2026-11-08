@@ -1,4 +1,4 @@
-# dotflies
+# dotfiles
 
 Personal Neovim and VS Code configuration snapshot. The VS Code extension list is a snapshot of installed extensions; versions are documented in `vscode/extensions.txt`, while the install command uses extension IDs so it can install current versions.
 
@@ -7,8 +7,8 @@ Personal Neovim and VS Code configuration snapshot. The VS Code extension list i
 This configuration uses [AstroNvim v6](https://docs.astronvim.com/) and [lazy.nvim](https://github.com/folke/lazy.nvim). Install Neovim, Git, and a Nerd Font (for icons), then back up any existing `~/.config/nvim` and copy `nvim/` there:
 
 ```sh
-git clone https://github.com/urdadx/dotflies.git
-cp -r dotflies/nvim ~/.config/nvim
+git clone https://github.com/urdadx/dotfiles.git
+cp -r dotfiles/nvim ~/.config/nvim
 nvim
 ```
 
@@ -25,7 +25,7 @@ Install the saved extensions:
 ```sh
 while IFS=@ read -r extension version; do
   [ -n "$extension" ] && code --install-extension "$extension"
-done < dotflies/vscode/extensions.txt
+done < dotfiles/vscode/extensions.txt
 ```
 
 `vscode/extensions.txt` records extension IDs **and the installed versions** at capture time. To install those exact versions, use `code --install-extension "publisher.extension@version"` for a given entry instead. The editor uses Geist Mono, One Hunter Flexoki Light, Material Icon Theme, Fluent Icons, 2-space indentation, format-on-save, and language-specific Biome/Prettier/Oxc/Black/rust-analyzer/Go formatting. Keybindings customize the integrated terminal, file explorer, file utilities, line duplication, and expand-region shortcuts. Install the Geist Mono font separately if desired.
